@@ -1,5 +1,5 @@
 from fastapi import FastAPI 
-from app.db import create_db_and_tables
+# from app.db import create_db_and_tables
 from app.routers import users, posts, auth, vote
 from fastapi.middleware.cors import CORSMiddleware
 
