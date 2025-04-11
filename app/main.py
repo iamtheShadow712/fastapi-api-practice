@@ -24,6 +24,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get('/', status_code=200)
+def root():
+    return {"message": "You app is up and running"}
+
 app.include_router(users.router)
 app.include_router(posts.router)
 app.include_router(auth.router)
