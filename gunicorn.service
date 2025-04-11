@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=siddharth
 Group=siddharth
-WorkingDirectory=/home/siddharth/app/src
+WorkingDirectory=/home/siddharth/app/src/
 Environment="Path=/home/siddharth/app/venv/bin"
 ExecStart=/home/siddharth/app/venv/bin/gunicorn -w 3 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000
 
